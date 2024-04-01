@@ -32,7 +32,7 @@ while True:
     printText("-- R for rock , P for paper , S for scissor , Q to quit --", 0, 70)
     user_input = wn.textinput("Rock Paper Scissors", "Enter your choice here (R/P/S/Q): ").lower()
     
-    if user_input == "q":
+    if user_input == "Q":
         print("Okay you quit")
         print("Your score >> ", user)
         print("Computer score >> ", comp)
@@ -44,23 +44,23 @@ while True:
         
         print("The computer chose: ", comp_input)
 
-        if comp_input == "rock" and user_input == "p":
+        if comp_input == "rock" and user_input == "P":
             print("You win!")
             user += 1
-        elif comp_input == "paper" and user_input == "s":
+        elif comp_input == "paper" and user_input == "S":
             print("You win!")
             user += 1
-        elif comp_input == "scissor" and user_input == "r":
+        elif comp_input == "scissor" and user_input == "R":
             print("You win!")
             user += 1
         
-        elif comp_input == "paper" and user_input == "r":
+        elif comp_input == "paper" and user_input == "R":
             print("Compter wins!")
             comp += 1
-        elif comp_input == "rock" and user_input == "s":
+        elif comp_input == "rock" and user_input == "S":
             print("Compter wins!")
             comp += 1
-        elif comp_input == "scissor" and user_input == "p":
+        elif comp_input == "scissor" and user_input == "P":
             print("Compter wins!")
             comp += 1
 
