@@ -11,7 +11,7 @@ wn.setup(width=1000, height=600)
 tur = turtle.Turtle()
 tur.hideturtle()
 tur.penup()
-tur.goto(-100, 0) 
+tur.goto(-100, 0)
 
 
 def printText(text, x, y, color="black", font=("Arial", 16, "normal")):
@@ -19,10 +19,12 @@ def printText(text, x, y, color="black", font=("Arial", 16, "normal")):
     tur.goto(x, y)
     tur.write(text, align="center", font=font)
 
+
 def display_scores():
     tur.clear()
     printText(f"Your score: {user}", -150, 50)
     printText(f"Computer score: {comp}", -150, 0)
+
 
 user = 0
 comp = 0
@@ -30,44 +32,46 @@ comp = 0
 while True:
     printText(">>>>> THE ROCK PAPER & SCISSORS GAME <<<<<", 0, 100)
     printText("-- R for rock , P for paper , S for scissor , Q to quit --", 0, 70)
-    user_input = wn.textinput("Rock Paper Scissors", "Enter your choice here (R/P/S/Q): ").lower()
-    
+    user_input = wn.textinput(
+        "Rock Paper Scissors", "Enter your choice here (r/p/s/q): "
+    ).lower()
+
     if user_input == "Q":
         print("Okay you quit")
         print("Your score >> ", user)
         print("Computer score >> ", comp)
-        
+
         break
     else:
         options = ["rock", "paper", "scissor"]
         comp_input = random.choice(options)
-        
+
         print("The computer chose: ", comp_input)
 
-        if comp_input == "rock" and user_input == "P":
+        if comp_input == "rock" and user_input == "p":
             print("You win!")
             user += 1
-        elif comp_input == "paper" and user_input == "S":
+        elif comp_input == "paper" and user_input == "s":
             print("You win!")
             user += 1
-        elif comp_input == "scissor" and user_input == "R":
+        elif comp_input == "scissor" and user_input == "r":
             print("You win!")
             user += 1
-        
-        elif comp_input == "paper" and user_input == "R":
+
+        elif comp_input == "paper" and user_input == "r":
             print("Compter wins!")
             comp += 1
-        elif comp_input == "rock" and user_input == "S":
+        elif comp_input == "rock" and user_input == "s":
             print("Compter wins!")
             comp += 1
-        elif comp_input == "scissor" and user_input == "P":
+        elif comp_input == "scissor" and user_input == "p":
             print("Compter wins!")
             comp += 1
 
         elif comp_input == user_input:
             print("Draw")
 
-        else :
+        else:
             print("invalid input")
 
         display_scores()
